@@ -1,0 +1,50 @@
+/* font */
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url(../fonts/HelveticaNeue.ttc);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Home page */
+
+body {
+    background: url("../images/background-img.svg");
+    background-color: #cccccc;
+    width: 100vw;
+}
+
+header > img {
+    margin: 25px 0 26px 70px;
+}
+
+header hr {
+    width: 1780px;
+    border: 1px solid #1A1A1A;
+    margin: auto;
+}
+
+.homepage-btn {
+    width: 464px;
+    height: 60px;
+    background-color: #1A1A1A;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: 'Helvetica Neue';
+    position: absolute;
+    right: 728px;
+    left: 728px;
+    top: 500px;
+    cursor: pointer;
+}
+
+.transformation-logo {
+    margin: 365px 545px 0 1076px;
+}

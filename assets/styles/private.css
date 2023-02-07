@@ -1,0 +1,182 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css);
+
+/* font */
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url(../fonts/HelveticaNeue.ttc);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Private page */
+
+body {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.left-section {
+    width: 1098px;
+    background-color: #F9F9F9;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 45px;
+}
+
+.right-section {
+    width: 822px;
+}
+
+.private-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.private-info h1 {
+    font-family: 'Helvetica Neue';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #1A1A1A;
+    margin-bottom: 12px;
+}
+
+.private-info span {
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #1A1A1A;
+    margin-bottom: 15px;
+}
+
+.line {
+    border: 1px solid #1A1A1A;
+}
+
+.back-btn {
+    position: absolute;
+    top: 45px;
+    left: 40px;
+    cursor: pointer;
+}
+
+.container {
+    margin-top: 77px;
+}
+
+.username-surname {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-control label {
+    color: #000000;
+    font-family: 'Helvetica Neue';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    display: block;
+}
+
+.mb-8px {
+    margin-bottom: 8px;
+}
+
+.mr-56px {
+    margin-right: 56px;
+}
+
+.form-control input {
+    width: 371px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+}
+
+.form-control input::first-line {
+    color: #000000;
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+/* visibility: hidden; item style,Succes*/
+
+
+.form-control input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    padding: 14px 16px; 
+}
+
+.form-control small {
+    /* visibility: hidden; */
+    color: #2E2E2E;
+    font-family: 'Helvetica Neue';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    /* visibility: hidden; */
+}
+
+/* .form-control.error small {
+    color: #F02424;
+} */
+
+.form-control .class-name-left {
+    /* visibility: hidden; */
+    position: absolute;
+    top: 210px;
+    left: 490px;
+    visibility: hidden;
+}
+
+.form-control .class-surname-left {
+    /* visibility: hidden; */
+    position: absolute;
+    top: 210px;
+    left: 915px;
+    visibility: hidden;
+}
+
+/* visible */
+.form-control.success i.fa-check-circle {
+    visibility: hidden;
+    color: #98E37E;
+}
+
+/* visible */
+.form-control.error i.fa-exclamation-circle {
+    visibility: hidden;
+    color: #EF5050;
+}
+
+.form button {
+    cursor: pointer;
+    margin: 10px;
+    width: 100px;
+    height: 50px;
+    border: none;
+    background-color: red;
+    color: #000000;
+    font-size: 20px;
+    color: #98E37E;
+    border-radius: 10px;
+}
+
+
+
+
+

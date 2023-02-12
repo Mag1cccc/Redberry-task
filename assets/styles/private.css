@@ -17,7 +17,7 @@
 body {
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .left-section {
@@ -26,6 +26,7 @@ body {
     padding-left: 150px;
     padding-right: 150px;
     padding-top: 45px;
+    margin-bottom: 65px;
 }
 
 .right-section {
@@ -163,20 +164,217 @@ body {
     color: #EF5050;
 }
 
-.form button {
-    cursor: pointer;
-    margin: 10px;
-    width: 100px;
-    height: 50px;
-    border: none;
-    background-color: red;
-    color: #000000;
-    font-size: 20px;
-    color: #98E37E;
-    border-radius: 10px;
+.upload-img {
+    margin-top: 54px;
 }
 
+.upload-img span {
+    font-family: 'Helvetica Neue';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #1A1A1A;
+}
 
+.upload-img .choose-file {
+    visibility: hidden;
+}
+
+.upload-img .upload-btn {
+    border: none;
+    background-color: #0E80BF;
+    border-radius: 4px;
+    width: 107px;
+    height: 27px;
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    cursor: pointer;
+    position: absolute;
+    padding: 4px 20px;
+    left: 396px;
+   
+}
+
+.upload-img .error-icon {
+    /* hidden */
+    position: absolute;
+    left: 510px;
+    margin: 5px;
+    width: 21px;
+    height: 18px;
+    visibility: hidden;
+}
+
+.upload-img .success-icon {
+    /* hidden */
+    position: absolute;
+    left: 510px;
+    margin: 5px;
+    width: 21px;
+    height: 18px;
+    visibility: hidden;
+}
+
+.about-me {
+    margin-top: 49px;
+}
+
+.about-me h2 {
+    margin-bottom: 8px;
+    font-family: 'Helvetica Neue';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.about-me textarea {
+    width: 100%;
+    color: #000000;
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 16px 14px;
+    height: 120px;
+    background: #FFFFFF;
+    border-radius: 4px;
+}
+
+.email-field {
+    margin-top: 62px;
+}
+
+.email-field label {
+    display: block;
+    color: #000000;
+    font-family: 'Helvetica Neue';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.email-field .email-input {
+    width: 100%;
+    height: 48px;
+    background-color: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+}
+
+.email-field .email-input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    padding: 14px 16px;
+}
+
+.email-field .error-email-icon {
+    position: absolute;
+    top: 658px;
+    left: 960px;
+    visibility: hidden;
+}
+
+.email-field .email-input::first-line {
+    color: #000000;
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.email-field .success-email-icon {
+    position: absolute;
+    top: 660px;
+    left: 960px;
+    visibility: hidden;
+}
+
+.email-field .email-small {
+    color: #2E2E2E;
+    font-family: 'Helvetica Neue';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.number-field {
+    margin-top: 29px;
+}
+
+.number-field label {
+    display: block;
+    color: #000000;
+    font-family: 'Helvetica Neue';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.number-field .number-input {
+    width: 100%;
+    height: 48px;
+    background-color: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+}
+
+.number-field .number-input::first-line {
+    color: #000000;
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px
+}
+
+.number-field .error-num-icon {
+    position: absolute;
+    bottom: 124px;
+    left: 960px;
+    visibility: hidden;
+}
+
+.number-field .success-num-icon {
+    position: absolute;
+    bottom: 124px;
+    left: 960px;
+    visibility: hidden;
+}
+
+.number-field .num-small {
+    color: #2E2E2E;
+    font-family: 'Helvetica Neue';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.next-page-btn {
+    margin-top: 189px;
+    display: flex;
+    justify-content: end;
+}
+
+.next-page-btn .next-btn {
+    width: 151px;
+    height: 48px;
+    background-color: #6B40E3;
+    border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    font-family: 'Helvetica Neue';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    padding: 14px 35px;
+}
 
 
 

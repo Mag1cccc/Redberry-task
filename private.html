@@ -39,9 +39,41 @@
                         <small id="smallest">მინიმუმ 2 ასო,ქართული ასოები</small>
                     </div>
                 </div>
-                <button>შემდეგი</button>
             </form>
-            
+            <div class="upload-img">
+                <span>პირადი ფოტოს ატვირთვა</span>
+                <img src="./assets/images/error(!).svg" alt="error icon" class="error-icon" id="error-icon">
+                <img src="./assets/images/success-icon.svg" alt="success icon" class="success-icon" id="success-icon">
+                <!-- <input type="file" id="actual-btn" class="choose-file"/>
+                <label for="actual-btn" class="upload-btn" id="upload-btn">ატვირთვა</label> -->
+                <input style="display:none" type="file" id="my-file">
+                <button type="button" onclick="document.getElementById('my-file').click()" class="upload-btn">ატვირთვა</button>
+            </div>
+            <div class="about-me">
+                <h2>ჩემს შესახებ (არასავალდებულო)</h2>
+                <textarea name="about-me" id="about-me" cols="30" rows="10"></textarea>
+            </div>
+            <div class="email-field">
+                <form  class="email-form" id="email-form">
+                    <label class="mb-8px" id="email-label">ელ.ფოსტა</label>
+                    <input type="email" required placeholder="anzorr666@redberry.ge" id="email-input" class="email-input mb-8px">
+                    <img src="./assets/images/error(!).svg" class="error-email-icon" id="error-email-icon">
+                    <img src="./assets/images/success-icon.svg" class="success-email-icon" id="success-email-icon">
+                    <small id="email-small" class="email-small">უნდა მთავრდებოდეს @redberry.ge-ით</small>
+                </form>
+            </div>
+            <div class="number-field">
+                <form action="#" class="number-form" id="number-form">
+                    <label class="number-label mb-8px" id="number-label">მობილურის ნომერი</label>
+                    <input type="number" placeholder="+995 551 12 34 56" id="number-input" class="number-input">
+                    <img src="./assets/images/error(!).svg" class="error-num-icon" id="error-num-icon">
+                    <img src="./assets/images/success-icon.svg"  id="success-num-icon" class="success-num-icon">
+                    <small id="num-small" class="num-small">უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</small>
+                </form>
+            </div>
+            <div class="next-page-btn">
+                <button id="next-btn" class="next-btn">შემდეგი</button>
+            </div>
         </div>
     </section>
     <section class="right-section">

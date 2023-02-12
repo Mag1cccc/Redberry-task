@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>გამოცდილება</title>
+    <link rel="stylesheet" href="./assets/styles/experience.css">
+</head>
+<body>
+    <section class="left-section">
+        <div class="experience-info">
+            <h1>გამოცდილება</h1>
+            <span>2/3</span>
+        </div>
+        <div class="line"></div>
+        <img class="back-btn" id="back-btn" src="./assets/images/arrow svg.svg" alt="arrow photo">
+        <div class="container">
+            <div class="position-field mb-31px">
+                <form  class="position-form"  onchange="checkPosition()" id="position-form">
+                    <label class="mb-8px label-header" id="position-label"> თანამდებობა </label>
+                    <input type="text" required placeholder="დეველოპერი, დიზაინერი, ა.შ." id="position-input" class="input-100 mb-8px">
+                    <img src="./assets/images/error(!).svg" class="error-position-icon left-910 top-208 hide-icons" id="error-position-icon">
+                    <img src="./assets/images/success-icon.svg" class="success-position-icon left-910  hide-icons" id="success-position-icon">
+                    <small id="position-small" class="small-text"> მინიმუმ 2 სიმბოლო </small>
+                </form>
+            </div>
+            <div class="employer-field mb-31px">
+                <form  class="employer-form" onchange="checkEmployer()" id="employer-form">
+                    <label class="mb-8px label-header" id="employer-label"> დამსაქმებელი </label>
+                    <input type="text" required placeholder="დამსაქმებელი" id="employer-input" class="input-100 mb-8px">
+                    <img src="./assets/images/error(!).svg" class="error-employer-icon left-910 hide-icons" id="error-employer-icon">
+                    <img src="./assets/images/success-icon.svg" class="success-employer-icon left-910 hide-icons" id="success-employer-icon">
+                    <small id="employer-small" class="small-text"> მინიმუმ 2 სიმბოლო </small>
+                </form>
+            </div>
+            <div class="start-end mb-33px">
+
+                <!-- ვალიდაციაა საჭირო -->
+
+                <form  class="start-form"  id="start-form">
+                    <label class="mb-8px label-header" id="start-label"> დაწყების რიცხვი </label>
+                    <input type="date" required id="start-input" class=" mb-8px date-input">
+                    <!-- <img src="./assets/images/error(!).svg" class="error-start-icon left-910 hide" id="error-start-icon">
+                    <img src="./assets/images/success-icon.svg" class="success-start-icon left-910 hide" id="success-start-icon"> -->
+                </form>
+
+                <!-- ვალიდაციაა საჭირო -->
+
+                <form  class="end-form mb-33px" id="end-form">
+                    <label class="mb-8px label-header" id="end-label"> დამთავრების რიცხვი </label>
+                    <input type="date" required id="end-input" class=" mb-8px date-input">
+                    <!-- <img src="./assets/images/error(!).svg" class="error-end-icon left-910 hide" id="error-end-icon">
+                    <img src="./assets/images/success-icon.svg" class="success-end-icon left-910 hide" id="success-end-icon"> -->
+                </form>
+            </div>
+            <div class="description">
+                <label class="label-header mb-8px">აღწერა</label>
+                <textarea name="description-me" id="description" cols="30" rows="10" class="for-textarea" onchange="checkDescription()"></textarea>
+            </div>
+            <div class="line2"></div>
+            <div class="for-button mt-45px mb-114px">
+                <button class="add-experience-btn" id="add-btn"> მეტი გამოცდილების დამატება </button>
+            </div>
+
+            <!-- FOR ME -->
+
+            <div class="two-button mb-65px">
+                <button class="back-button" id="back-button">უკან</button>
+                <button class="next-button" id="next-button">შემდეგი</button>
+            </div>
+        </div>
+    </section>
+    <section class="right-section">
+
+    </section>
+
+    <script src="./js/experience.js"></script>
+</body>
+</html>

@@ -6,12 +6,7 @@ backBtn.onclick = function () {
 //Regural Expression 
 const checkLetter = /^[აბგდევზთიკლმნოპჟრსტუფქღყშჩცძწჭხჯჰ]+$/ //georgian letter
 const emailRegex = /^[a-zA-Z]+@redberry.ge$/ //email
-
-//for number check
-//regural expression for georgian letter
-// const mobilenumber = /^[0-9]{9}&/
-//regural expression for georgian +995
-
+const checkMobile = /^995[0-9]{9}$/  //number
 
 
 //Validation Name and Surname
@@ -26,10 +21,10 @@ const successSurNameIcon = document.getElementById("successSurNameIcon");
 const errorSurNameIcon = document.getElementById("errorSurNameIcon");
 
 
+//Validation Name
 
-const check = () => {
+const checkName = () => {
     const userNameValue = userName.value.trim();
-    const surNameValue = surName.value.trim();
     
     if(userNameValue === ' ' || userNameValue.length < 2 || !userNameValue.match(checkLetter)) {
         nameSmall.style.color = "#EF5050";
@@ -45,7 +40,15 @@ const check = () => {
         successNameIcon.style.visibility = "visible";
         successNameIcon.style.color = "#98E37E";
     }
-    if(surNameValue === ' ' ||  surNameValue.length < 2  || !userNameValue.match(checkLetter) ) {
+}
+
+
+//Validation Surname
+
+const checkSurName = () => {
+    const surNameValue = surName.value.trim();
+
+    if(surNameValue === ' ' ||  surNameValue.length < 2  || !surNameValue.match(checkLetter) ) {
         small.style.color = "#EF5050";
         surName.style.borderColor = "#EF5050";
         successSurNameIcon.style.visibility = "hidden";
@@ -69,8 +72,6 @@ const emailLabel = document.getElementById("email-label");
 const emailInput = document.getElementById("email-input");
 const emailErrorIcon = document.getElementById("error-email-icon");
 const emailSuccessIcon = document.getElementById("success-email-icon");
-
-
 
 const checkEmail = () => {
     emailInputValue = emailInput.value.trim();
@@ -97,11 +98,6 @@ const numErrorIcon = document.getElementById("error-num-icon");
 const numSuccessIcon = document.getElementById("success-num-icon");
 const numSmall = document.getElementById("num-small");
 
-
-
-const checkMobile = /^995[0-9]{9}$/ 
-// const checkMobileNumber = /^[0-9]{9}&/;
-
 const checkNumber = () => {
     const numberInputValue = numberInput.value.trim();
     if(numberInputValue === " " || !numberInputValue.match(checkMobile)) {
@@ -115,7 +111,6 @@ const checkNumber = () => {
         numSuccessIcon.style.visibility = "visible";
     }
 }
-
 
 
 //Upload button (ატვირთვა)
@@ -140,16 +135,10 @@ const checkUpload = () => {
 }
 
 
-
 //Button(შემდეგი)
 
 const nextButton = document.getElementById("next-btn")
 
-nextButton.onclick = () => {
-    check();
-    checkEmail();
-    checkNumber();
-}
 
 
 

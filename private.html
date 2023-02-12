@@ -23,15 +23,15 @@
 
         <div class="container">
             <form class="form" id="form">
-                <div class="username-surname">
-                    <div class="form-control success">
+                <div class="username-surname" >
+                    <div class="form-control success" onchange="checkName()">
                         <label class="mb-8px">სახელი</label>
                         <input type="text" placeholder="ანზორ" id="userName" class="mr-56px mb-8px">
                         <i class="fas fa-check-circle class-name-left" id="successNameIcon"></i>
                         <i class="fas fa-exclamation-circle class-name-left" id="errorNameIcon"></i>
                         <small id="nameSmall">მინიმუმ 2 ასო,ქართული ასოები</small>
                     </div>
-                    <div class="form-control">
+                    <div class="form-control" onchange="checkSurName()">
                         <label class="mb-8px">გვარი</label>
                         <input type="text" placeholder="მუმლაძე" id="surName" class="mb-8px">
                         <i class="fas fa-check-circle class-surname-left" id="successSurNameIcon"></i>
@@ -54,7 +54,7 @@
                 <textarea name="about-me" id="about-me" cols="30" rows="10"></textarea>
             </div>
             <div class="email-field">
-                <form  class="email-form" id="email-form">
+                <form  class="email-form" id="email-form" onchange="checkEmail()">
                     <label class="mb-8px" id="email-label">ელ.ფოსტა</label>
                     <input type="email" required placeholder="anzorr666@redberry.ge" id="email-input" class="email-input mb-8px">
                     <img src="./assets/images/error(!).svg" class="error-email-icon" id="error-email-icon">
@@ -63,7 +63,7 @@
                 </form>
             </div>
             <div class="number-field">
-                <form action="#" class="number-form" id="number-form">
+                <form action="#" class="number-form" id="number-form" onchange="checkNumber()">
                     <label class="number-label mb-8px" id="number-label">მობილურის ნომერი</label>
                     <input type="number" placeholder="+995 551 12 34 56" id="number-input" class="number-input">
                     <img src="./assets/images/error(!).svg" class="error-num-icon" id="error-num-icon">

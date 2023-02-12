@@ -403,3 +403,59 @@ body {
 }
 
 
+.for-textarea-style {
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    display: block;
+}
+
+.mb-17px {
+    margin-bottom: 17px;
+}
+
+.mb-10px {
+    margin-bottom: 10px;
+}
+
+.mb-34px {
+    margin-bottom: 34px;
+}
+
+.for-h3 {
+    position: relative;
+    visibility: hidden;
+}
+
+.uploaded-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 40px;
+    margin-left: 15px;
+    margin-top: 48px;
+}
+
+.mt-15px {
+    margin-top: 15px;
+}
+
+.logo1 {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 44px;
+}
+
+.div2 {
+    max-width: 400px;
+}
+
+.div1 {
+    max-width: 470px;
+}
+
+
+
+

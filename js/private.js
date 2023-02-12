@@ -1,5 +1,5 @@
 const backBtn = document.getElementById("back-btn");
-backBtn.onclick = function () {
+backBtn.onclick =  () => {
     location.href = "index.html";
 }
 
@@ -134,11 +134,6 @@ const checkUpload = () => {
     }
 }
 
-
-//Button(შემდეგი)
-
-const nextButton = document.getElementById("next-btn")
-
 const loadFile = function(event) {
     const image = document.getElementById('output');
     image.src=URL.createObjectURL(event.target.files[0]);
@@ -171,6 +166,18 @@ const loadNumber = function(event) {
     const forNum = document.getElementById('for-num');
     forNum.innerText = event.target.value;
 }
+
+
+//Button(შემდეგი)
+
+const nextButton = document.getElementById("next-btn")
+
+nextButton.onclick = () => {
+    location.href = "experience.html";
+}
+
+
+
 
 
 

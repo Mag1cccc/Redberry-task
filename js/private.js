@@ -5,7 +5,7 @@ backBtn.onclick = function () {
 
 //Regural Expression 
 const checkLetter = /^[აბგდევზთიკლმნოპჟრსტუფქღყშჩცძწჭხჯჰ]+$/ //georgian letter
-const emailRegex = /^[a-zA-Z]+@redberry.ge$/ //email
+const emailRegex = /^[a-zA-Z]+[0123456789]+@redberry.ge$/ //email
 const checkMobile = /^995[0-9]{9}$/  //number
 
 
@@ -126,7 +126,7 @@ const checkUpload = () => {
     if(uploadBtnValue === " ") {
         errorUploadBtnIcon.style.visibility = "visible";
         successUploadBtnIcon.style.visibility = "hidden";
-       
+        
     } else {
         successUploadBtnIcon.style.visibility = "visible";
         errorUploadBtnIcon.style.visibility = "hidden";
@@ -138,6 +138,39 @@ const checkUpload = () => {
 //Button(შემდეგი)
 
 const nextButton = document.getElementById("next-btn")
+
+const loadFile = function(event) {
+    const image = document.getElementById('output');
+    image.src=URL.createObjectURL(event.target.files[0]);
+};
+
+//name
+const loadName = function(event) {
+    const name = document.getElementById('name');
+    name.innerText = event.target.value;
+};
+
+//lastname 
+
+const loadLastName = function(event) {
+    const lastName = document.getElementById('lastname');
+    lastName.innerText = event.target.value;
+}
+
+const loadTextArea = function(event) {
+    const textArea = document.getElementById('for-textarea');
+    textArea.innerText = event.target.value;
+}
+
+const loadEmail = function(event) {
+    const forEmail = document.getElementById('for-email');
+    forEmail.innerText = event.target.value;
+}
+
+const loadNumber = function(event) {
+    const forNum = document.getElementById('for-num');
+    forNum.innerText = event.target.value;
+}
 
 
 

@@ -376,5 +376,30 @@ body {
     padding: 14px 35px;
 }
 
+.right-section {
+    padding: 68px 75px 0px 80px;
+}
+
+.right-names {
+    font-family: 'Helvetica Neue';
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 42px;
+    color: #F93B1D;
+}
+
+.ml-20px {
+    margin-left: 20px;
+}
+
+
+.right-mail-num {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #1A1A1A;
+}
 
 

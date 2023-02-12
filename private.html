@@ -24,16 +24,16 @@
         <div class="container">
             <form class="form" id="form">
                 <div class="username-surname" >
-                    <div class="form-control success" onchange="checkName()">
+                    <div class="form-control success" onchange="checkName()" >
                         <label class="mb-8px">სახელი</label>
-                        <input type="text" placeholder="ანზორ" id="userName" class="mr-56px mb-8px">
+                        <input type="text" placeholder="ანზორ" id="userName" class="mr-56px mb-8px" onchange="loadName(event)">
                         <i class="fas fa-check-circle class-name-left" id="successNameIcon"></i>
                         <i class="fas fa-exclamation-circle class-name-left" id="errorNameIcon"></i>
                         <small id="nameSmall">მინიმუმ 2 ასო,ქართული ასოები</small>
                     </div>
                     <div class="form-control" onchange="checkSurName()">
                         <label class="mb-8px">გვარი</label>
-                        <input type="text" placeholder="მუმლაძე" id="surName" class="mb-8px">
+                        <input type="text" placeholder="მუმლაძე" id="surName" class="mb-8px" onchange="loadLastName(event)">
                         <i class="fas fa-check-circle class-surname-left" id="successSurNameIcon"></i>
                         <i class="fas fa-exclamation-circle class-surname-left" id="errorSurNameIcon"></i>
                         <small id="smallest">მინიმუმ 2 ასო,ქართული ასოები</small>
@@ -46,17 +46,18 @@
                 <img src="./assets/images/success-icon.svg" alt="success icon" class="success-icon" id="success-icon">
                 <!-- <input type="file" id="actual-btn" class="choose-file"/>
                 <label for="actual-btn" class="upload-btn" id="upload-btn">ატვირთვა</label> -->
-                <input style="display:none" type="file" id="my-file">
+                <input style="display:none" type="file" id="my-file" onchange="loadFile(event)">
                 <button type="button" onclick="document.getElementById('my-file').click()" class="upload-btn">ატვირთვა</button>
+                
             </div>
             <div class="about-me">
                 <h2>ჩემს შესახებ (არასავალდებულო)</h2>
-                <textarea name="about-me" id="about-me" cols="30" rows="10"></textarea>
+                <textarea name="about-me" id="about-me" cols="30" rows="10" onchange="loadTextArea(event)"></textarea>
             </div>
             <div class="email-field">
                 <form  class="email-form" id="email-form" onchange="checkEmail()">
                     <label class="mb-8px" id="email-label">ელ.ფოსტა</label>
-                    <input type="email" required placeholder="anzorr666@redberry.ge" id="email-input" class="email-input mb-8px">
+                    <input type="email" required placeholder="anzorr666@redberry.ge" id="email-input" class="email-input mb-8px" onchange="loadEmail(event)">
                     <img src="./assets/images/error(!).svg" class="error-email-icon" id="error-email-icon">
                     <img src="./assets/images/success-icon.svg" class="success-email-icon" id="success-email-icon">
                     <small id="email-small" class="email-small">უნდა მთავრდებოდეს @redberry.ge-ით</small>
@@ -65,7 +66,7 @@
             <div class="number-field">
                 <form action="#" class="number-form" id="number-form" onchange="checkNumber()">
                     <label class="number-label mb-8px" id="number-label">მობილურის ნომერი</label>
-                    <input type="number" placeholder="+995 551 12 34 56" id="number-input" class="number-input">
+                    <input type="number" placeholder="+995 551 12 34 56" id="number-input" class="number-input" onchange="loadNumber(event)">
                     <img src="./assets/images/error(!).svg" class="error-num-icon" id="error-num-icon">
                     <img src="./assets/images/success-icon.svg"  id="success-num-icon" class="success-num-icon">
                     <small id="num-small" class="num-small">უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</small>
@@ -77,7 +78,15 @@
         </div>
     </section>
     <section class="right-section">
-        <h1>გასაკეთებელია :D</h1>
+        <div class="right-name-lastname">
+        <span id="name" class="right-names"></span>
+        <span id="lastname" class="right-names ml-20px"></span>
+        </div>
+        <div id="for-textarea" class="for-textarea"></div>   
+        <div id="for-email" class="right-mail-num "></div>
+        <div id="for-num" class="right-mail-num "></div>
+        <p><img id="output"  width="200" class="upload-image"/></p>
+        
     </section>
     <script src="./js/private.js"></script>
 </body>

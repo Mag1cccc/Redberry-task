@@ -7,7 +7,7 @@
     <title>გამოცდილება</title>
     <link rel="stylesheet" href="./assets/styles/experience.css">
 </head>
-<body>
+<body onload="loadForm()">
     <section class="left-section">
         <div class="experience-info">
             <h1>გამოცდილება</h1>
@@ -19,7 +19,7 @@
             <div class="position-field mb-31px">
                 <form  class="position-form"  onchange="checkPosition()" id="position-form">
                     <label class="mb-8px label-header" id="position-label"> თანამდებობა </label>
-                    <input type="text" required placeholder="დეველოპერი, დიზაინერი, ა.შ." id="position-input" class="input-100 mb-8px">
+                    <input type="text" required placeholder="დეველოპერი, დიზაინერი, ა.შ." id="position-input" class="input-100 mb-8px" onchange="loadPosition(event)">
                     <img src="./assets/images/error(!).svg" class="error-position-icon left-910 top-208 hide-icons" id="error-position-icon">
                     <img src="./assets/images/success-icon.svg" class="success-position-icon left-910  hide-icons" id="success-position-icon">
                     <small id="position-small" class="small-text"> მინიმუმ 2 სიმბოლო </small>
@@ -28,7 +28,7 @@
             <div class="employer-field mb-31px">
                 <form  class="employer-form" onchange="checkEmployer()" id="employer-form">
                     <label class="mb-8px label-header" id="employer-label"> დამსაქმებელი </label>
-                    <input type="text" required placeholder="დამსაქმებელი" id="employer-input" class="input-100 mb-8px">
+                    <input type="text" required placeholder="დამსაქმებელი" id="employer-input" class="input-100 mb-8px" onchange="loadEmployer(event)">
                     <img src="./assets/images/error(!).svg" class="error-employer-icon left-910 hide-icons" id="error-employer-icon">
                     <img src="./assets/images/success-icon.svg" class="success-employer-icon left-910 hide-icons" id="success-employer-icon">
                     <small id="employer-small" class="small-text"> მინიმუმ 2 სიმბოლო </small>
@@ -40,7 +40,7 @@
 
                 <form  class="start-form"  id="start-form">
                     <label class="mb-8px label-header" id="start-label"> დაწყების რიცხვი </label>
-                    <input type="date" required id="start-input" class=" mb-8px date-input">
+                    <input type="date" required id="start-input" class=" mb-8px date-input" onchange="loadStarts(event)">
                     <!-- <img src="./assets/images/error(!).svg" class="error-start-icon left-910 hide" id="error-start-icon">
                     <img src="./assets/images/success-icon.svg" class="success-start-icon left-910 hide" id="success-start-icon"> -->
                 </form>
@@ -49,14 +49,14 @@
 
                 <form  class="end-form mb-33px" id="end-form">
                     <label class="mb-8px label-header" id="end-label"> დამთავრების რიცხვი </label>
-                    <input type="date" required id="end-input" class=" mb-8px date-input">
+                    <input type="date" required id="end-input" class=" mb-8px date-input" onchange="loadEnds(event)">
                     <!-- <img src="./assets/images/error(!).svg" class="error-end-icon left-910 hide" id="error-end-icon">
                     <img src="./assets/images/success-icon.svg" class="success-end-icon left-910 hide" id="success-end-icon"> -->
                 </form>
             </div>
-            <div class="description">
+            <div class="description" onchange="checkDescription()">
                 <label class="label-header mb-8px">აღწერა</label>
-                <textarea name="description-me" id="description" cols="30" rows="10" class="for-textarea" onchange="checkDescription()"></textarea>
+                <textarea name="description-me" id="description" cols="30" rows="10" class="for-textarea"onchange="loadAboutss(event)" ></textarea>
             </div>
             <div class="line2"></div>
             <div class="for-button mt-45px mb-114px">
@@ -72,7 +72,23 @@
         </div>
     </section>
     <section class="right-section">
+        <div class="div1">
+            <div class="right-name-lastname mb-17px">
+                <span id="name" class="right-names mb-17px"></span>
+                <span id="lastname" class="right-names ml-20px "></span>
+            </div>
+        </div>
+        <div id="for-email" class="right-mail-num mb-10px"></div>
+        <div id="for-num" class="right-mail-num mb-34px"></div>
+        <div class="div2"><div id="for-textarea" class="for-textarea-style mt-15px"></div></div>   
         
+        <p><img id="output"  width="200" class="uploaded-image" /></p>
+        <img src="./assets/images/LOGO-12 1 (1).svg" class="logo1">
+        <span id="position"></span>
+        <span id="employer"></span>
+        <span id="starts"></span>
+        <span id="ends"></span>
+        <span id="about"></span>
     </section>
 
     <script src="./js/experience.js"></script>

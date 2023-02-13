@@ -67,6 +67,38 @@ const checkDate = () => {
 }
 
 
+//position
+const loadPosition = function(event) {
+    const position = document.getElementById('position');
+    position.innerText = event.target.value;
+    localStorage.setItem("position",event.target.value);
+};
+
+const loadEmployer = function(event) {
+    const employer = document.getElementById('employer');
+    employer.innerText = event.target.value;
+    localStorage.setItem("employer",event.target.value);
+}
+
+const loadStarts = function(event) {
+    const starts = document.getElementById('starts');
+    starts.innerText = event.target.value;
+    localStorage.setItem("experienceStart",event.target.value);
+}
+
+const loadEnds = function(event) {
+    const forEmail = document.getElementById('ends');
+    ends.innerText = event.target.value;
+    localStorage.setItem("experienceEnd",event.target.value);
+}
+
+const loadAboutss = function(event) {
+    const aboutss = document.getElementById('about');
+    aboutss.innerText = event.target.value;
+    localStorage.setItem("exeperienceAbout",event.target.value);
+}
+
+
 
 //DESCRIPTION VALIDATION
 const description = document.getElementById("description");
@@ -93,4 +125,35 @@ nextButton.onclick = function () {
         alert("Form is not valid");
     }
 }
+
+
+const loadForm = () => {
+    const name = localStorage.getItem("name");
+    const lastname = localStorage.getItem("lastname");
+    const textarea = localStorage.getItem("textarea");
+    const email = localStorage.getItem("email");
+    const number = localStorage.getItem("number");
+    const image = localStorage.getItem("image");
+
+    const nameEl = document.getElementById("name");
+    const lastnameEl = document.getElementById("lastname");
+    const textareaEl = document.getElementById("for-textarea");
+    const emailEl = document.getElementById("for-email");
+    const numberEl = document.getElementById("for-num");
+    const imageEl = document.getElementById("output");
+
+    nameEl.innerText = name;
+    lastnameEl.innerText = lastname;
+    textareaEl.innerText = textarea;
+    emailEl.innerText = email;
+    numberEl.innerText = number;
+    imageEl.src = image;
+    console.log(image);
+}
+
+
+
+
+
+
 

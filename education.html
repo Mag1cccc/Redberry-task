@@ -7,7 +7,7 @@
     <title>განათლება</title>
     <link rel="stylesheet" href="./assets/styles/education.css">
 </head>
-<body>
+<body onload="fetchData(); loadForm()">
     <section class="left-section">
         <div class="education-info">
             <h1 class="mb-12px">განათლება</h1>
@@ -18,7 +18,7 @@
             <div class="education-field mb-31px">
                 <form  class="position-form"  onchange="checkEducation()" id="position-form">
                     <label class="mb-8px label-header" id="education-label"> სასწავლებელი </label>
-                    <input type="text" required placeholder="სასწავლებელი" id="education-input" class="input-100 mb-8px">
+                    <input type="text" required placeholder="სასწავლებელი" id="education-input" class="input-100 mb-8px" onchange="loadSchool(event)">
                     <img src="./assets/images/error(!).svg" class="error-education-icon hide-icons" id="error-education-icon">
                     <img src="./assets/images/success-icon.svg" class="success-education-icon hide-icons" id="success-education-icon">
                     <small id="education-small" class="small-text"> მინიმუმ 2 სიმბოლო </small>
@@ -27,12 +27,14 @@
             <div class="DIV2 mb-34px ">
                 <div class="grade">
                     <label class="label-header mb-8px ">ხარისხი</label>
-                    <input type="text" placeholder="ხარისხი" class="mb-8px grade-end-date-input">
+                    <select type="text" placeholder="ხარისხი" class="mb-8px grade-end-date-input" id="grade1" onchange="gradeSelect(); loadDegree(event)">
+
+                    </select>
                 </div>
-                <div class="end-Date">
+                <div class="end-Date ">
                     <form  class="end-form " id="end-form">
                         <label class="mb-8px label-header" id="end-label"> დამთავრების რიცხვი </label>
-                        <input type="date" required id="end-input" class=" mb-8px date-input grade-end-date-input" onchange="checkEndInput()">
+                        <input type="date" required id="end-input" class=" mb-8px date-input grade-end-date-input" onchange="checkEndInput();loadEndDate(event)">
                         <!-- <img src="./assets/images/error(!).svg" class="error-end-icon left-910 hide" id="error-end-icon">
                         <img src="./assets/images/success-icon.svg" class="success-end-icon left-910 hide" id="success-end-icon"> -->
                     </form>
@@ -41,7 +43,7 @@
             
             <div class="description mt-34px">
                 <label class="label-header mb-8px">აღწერა</label>
-                <textarea name="description-me"  placeholder="განათლების აღწერა"id="description" cols="30" rows="10" class="for-textarea" onchange="checkDescription()"></textarea>
+                <textarea name="description-me"  placeholder="განათლების აღწერა"id="description" cols="30" rows="10" class="for-textarea" onchange="checkDescription();loadAboutDegree(event)"></textarea>
             </div>
             
             <div class="line2 mt-53px"></div>
@@ -57,9 +59,29 @@
             </div>
         </div>
     </section>
-
+        
     <section class="right-section">
-
+        <div class="div1">
+            <div class="right-name-lastname mb-17px">
+                <span id="name" class="right-names mb-17px"></span>
+                <span id="lastname" class="right-names ml-20px "></span>
+            </div>
+        </div>
+        <div id="for-email" class="right-mail-num mb-10px"></div>
+        <div id="for-num" class="right-mail-num mb-34px"></div>
+        <div class="div2"><div id="for-textarea" class="for-textarea-style mt-15px"></div></div>   
+        
+        <p><img id="output"  width="200" class="uploaded-image" /></p>
+        <img src="./assets/images/LOGO-12 1 (1).svg" class="logo1">
+        <span id="position"></span>
+        <span id="employer"></span>
+        <span id="starts"></span>
+        <span id="ends"></span>
+        <span id="about"></span>
+        <span id="school"></span>
+        <span id="degree"></span>
+        <span id="end-date"></span>
+        <span id="about"></span>
     </section>
     <script src="./js/education.js"></script>
 </body>

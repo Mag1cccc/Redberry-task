@@ -141,16 +141,20 @@ const checkUpload = () => {
 
 const loadFile = function(event) {
     const image = document.getElementById('output');
-    console.log(event.target.files[0])
     image.src=URL.createObjectURL(event.target.files[0]);
-    
+    var file = event.target.files[0];
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function() {
+        localStorage.setItem('image', reader.result);
+    }
 };
 
 //name
 const loadName = function(event) {
     const name = document.getElementById('name');
     name.innerText = event.target.value;
-    localStorage.setItem("name",userName.value);
+    localStorage.setItem("name",event.target.value);
 };
 
 //lastname 
@@ -158,21 +162,25 @@ const loadName = function(event) {
 const loadLastName = function(event) {
     const lastName = document.getElementById('lastname');
     lastName.innerText = event.target.value;
+    localStorage.setItem("lastname",event.target.value);
 }
 
 const loadTextArea = function(event) {
     const textArea = document.getElementById('for-textarea');
     textArea.innerText = event.target.value;
+    localStorage.setItem("textarea",event.target.value);
 }
 
 const loadEmail = function(event) {
     const forEmail = document.getElementById('for-email');
     forEmail.innerText = event.target.value;
+    localStorage.setItem("email",event.target.value);
 }
 
 const loadNumber = function(event) {
     const forNum = document.getElementById('for-num');
     forNum.innerText = event.target.value;
+    localStorage.setItem("number",event.target.value);
 }
 
 
@@ -189,12 +197,12 @@ nextButton.onclick = () => {
 }
 
 
-// const loadForm = () => {
-//     const storageName = localStorage.getItem("name");
-//     if(userName.value === ""){
-//         userName.value = storageName;
-//         userName.onchange();
-//     }
-// }
+const loadForm = () => {
+    const storageName = localStorage.getItem("name");
+    if(userName.value === ""){
+        userName.value = storageName;
+        userName.onchange();
+    }
+}
 
 

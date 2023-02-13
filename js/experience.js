@@ -44,6 +44,21 @@ const checkEmployer = () => {
 //START DATE VALIDATION
 
 const startInput = document.getElementById("start-input");
+const endInput = document.getElementById("end-input");
+const checkDate = () => {
+    const startDate = new Date(startInput.value);
+    const endDate = new Date(endInput.value);
+    console.log(startDate);
+    console.log(endDate);
+    
+    if(startDate <= endDate){
+        startInput.style.borderColor = "#98E37E";
+        endInput.style.borderColor = "#98E37E";
+    } else {
+        startInput.style.borderColor = "#EF5050";
+        endInput.style.borderColor = "#EF5050";
+    }
+}
 
 // const checkStartDate = () => {
 //     startInputValue = startInput.value.trim();

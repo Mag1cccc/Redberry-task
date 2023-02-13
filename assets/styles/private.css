@@ -205,7 +205,7 @@ body {
     margin: 5px;
     width: 21px;
     height: 18px;
-    visibility: hidden;
+    visibility: visible;
 }
 
 .upload-img .success-icon {

@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./assets/styles/private.css">
     
 </head>
-<body>
+<!-- onload="loadForm()" -->
+<body > 
     
     <section class="left-section">
         <div class="private-info">
@@ -22,7 +23,7 @@
         <img class="back-btn" id="back-btn" src="./assets/images/arrow svg.svg" alt="arrow photo">
 
         <div class="container">
-            <form class="form" id="form">
+            <form class="form" id="form" >
                 <div class="username-surname" >
                     <div class="form-control success" onchange="checkName()" >
                         <label class="mb-8px">სახელი</label>
@@ -40,7 +41,7 @@
                     </div>
                 </div>
             </form>
-            <div class="upload-img">
+            <div class="upload-img" onchange="checkUpload()">
                 <span>პირადი ფოტოს ატვირთვა</span>
                 <img src="./assets/images/error(!).svg" alt="error icon" class="error-icon" id="error-icon">
                 <img src="./assets/images/success-icon.svg" alt="success icon" class="success-icon" id="success-icon">

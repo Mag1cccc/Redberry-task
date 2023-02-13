@@ -32,6 +32,7 @@ const checkName = () => {
         successNameIcon.style.visibility = "hidden";
         errorNameIcon.style.visibility = "visible";
         errorNameIcon.style.color = "#EF5050";
+        return false;
         
     } else {
         nameSmall.style.color = "#2E2E2E";
@@ -39,6 +40,7 @@ const checkName = () => {
         errorNameIcon.style.visibility = "hidden";
         successNameIcon.style.visibility = "visible";
         successNameIcon.style.color = "#98E37E";
+        return true;
     }
 }
 
@@ -54,13 +56,14 @@ const checkSurName = () => {
         successSurNameIcon.style.visibility = "hidden";
         errorSurNameIcon.style.visibility = "visible";
         errorSurNameIcon.style.color = "#EF5050";
-        
+        return false;
     } else {
         small.style.color = "#2E2E2E";
         surName.style.borderColor = "#98E37E";
         errorSurNameIcon.style.visibility = "hidden";
         successSurNameIcon.style.visibility = "visible";
         successSurNameIcon.style.color = "#98E37E";
+        return true;
     }
 }
 
@@ -86,6 +89,7 @@ const checkEmail = () => {
         emailSuccessIcon.style.visibility = "visible";
         emailLabel.style.color = "#98E37E";
         emailInput.style.borderColor = "#98E37E";
+        return true;
     }
 }
 
@@ -109,6 +113,7 @@ const checkNumber = () => {
         numberInput.style.borderColor = "#98E37E";
         numErrorIcon.style.visibility = "hidden";
         numSuccessIcon.style.visibility = "visible";
+        return true;
     }
 }
 
@@ -118,31 +123,34 @@ const checkNumber = () => {
 const uploadBtn = document.getElementById("upload-btn");
 const errorUploadBtnIcon = document.getElementById("error-icon");
 const successUploadBtnIcon = document.getElementById("success-icon");
-
+const myFile = document.getElementById("my-file");
 
 const checkUpload = () => {
-    const uploadBtnValue = uploadBtn.value;
-    
-    if(uploadBtnValue === " ") {
+    const myFileValue = myFile.value;
+    console.log(myFileValue);
+    if(myFileValue === "") {
         errorUploadBtnIcon.style.visibility = "visible";
         successUploadBtnIcon.style.visibility = "hidden";
-        
+        return false;
     } else {
         successUploadBtnIcon.style.visibility = "visible";
         errorUploadBtnIcon.style.visibility = "hidden";
-        
+        return true;
     }
 }
 
 const loadFile = function(event) {
     const image = document.getElementById('output');
+    console.log(event.target.files[0])
     image.src=URL.createObjectURL(event.target.files[0]);
+    
 };
 
 //name
 const loadName = function(event) {
     const name = document.getElementById('name');
     name.innerText = event.target.value;
+    localStorage.setItem("name",userName.value);
 };
 
 //lastname 
@@ -173,12 +181,20 @@ const loadNumber = function(event) {
 const nextButton = document.getElementById("next-btn")
 
 nextButton.onclick = () => {
-    location.href = "experience.html";
+    if(checkName() && checkSurName() && checkEmail() && checkNumber() && checkUpload()){
+        location.href = "experience.html";
+    } else {
+        alert('Form is not valid')
+    }
 }
 
 
-
-
-
+// const loadForm = () => {
+//     const storageName = localStorage.getItem("name");
+//     if(userName.value === ""){
+//         userName.value = storageName;
+//         userName.onchange();
+//     }
+// }
 
 

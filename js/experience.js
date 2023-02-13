@@ -41,7 +41,7 @@ const checkEmployer = () => {
         employerErrorIcon.style.visibility = "hidden";
         employerSuccessIcon.style.visibility = "visible";
         employerInput.style.borderColor = "#98E37E" 
-        return true
+        return true;
     }
 }
 
@@ -52,17 +52,16 @@ const endInput = document.getElementById("end-input");
 const checkDate = () => {
     const startDate = new Date(startInput.value);
     const endDate = new Date(endInput.value);
-    console.log(startDate);
-    console.log(endDate);
+    
     
     if(startDate <= endDate){
         startInput.style.borderColor = "#98E37E";
         endInput.style.borderColor = "#98E37E";
-        return false;
+        return true;
     } else {
         startInput.style.borderColor = "#EF5050";
         endInput.style.borderColor = "#EF5050";
-        return true;
+        return false;
     }
 
 }
@@ -74,12 +73,12 @@ const description = document.getElementById("description");
 
 const checkDescription = () => {
     console.log(description.value);
-    if(description.value < 1) {
+    if(description.value.length < 1) {
         description.style.borderColor = "#EF5050";
         return false;
     } else {
         description.style.borderColor = "#98E37E"
-        return false;
+        return true;
     }
 }
 
@@ -87,10 +86,11 @@ const checkDescription = () => {
 
 const nextButton = document.getElementById("next-button");
 
-nextButton.onclick = () => {
+nextButton.onclick = function () {
     if(checkPosition() && checkEmployer() && checkDate() && checkDescription()){
         location.href = "education.html";
     } else {
-        alert('Form is not valid')
+        alert("Form is not valid");
     }
 }
+

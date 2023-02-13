@@ -15,10 +15,12 @@ const checkPosition = () => {
         positionErrorIcon.style.visibility = "visible";
         positionSuccessIcon.style.visibility = "hidden";
         positionInput.style.borderColor = "#EF5050"
+        return false;
     } else {
         positionErrorIcon.style.visibility = "hidden";
         positionSuccessIcon.style.visibility = "visible";
-        positionInput.style.borderColor = "#98E37E" 
+        positionInput.style.borderColor = "#98E37E"
+        return true 
     }
 }
 
@@ -34,10 +36,12 @@ const checkEmployer = () => {
         employerErrorIcon.style.visibility = "visible";
         employerSuccessIcon.style.visibility = "hidden";
         employerInput.style.borderColor = "#EF5050"
+        return false;
     } else {
         employerErrorIcon.style.visibility = "hidden";
         employerSuccessIcon.style.visibility = "visible";
         employerInput.style.borderColor = "#98E37E" 
+        return true
     }
 }
 
@@ -54,24 +58,14 @@ const checkDate = () => {
     if(startDate <= endDate){
         startInput.style.borderColor = "#98E37E";
         endInput.style.borderColor = "#98E37E";
+        return false;
     } else {
         startInput.style.borderColor = "#EF5050";
         endInput.style.borderColor = "#EF5050";
+        return true;
     }
+
 }
-
-// const checkStartDate = () => {
-//     startInputValue = startInput.value.trim();
-//     if(startInputValue === " " || startInput == " " || startInput == undefined) {
-//         startInput.style.borderColor = "#EF5050"
-//     } else {
-//         startInput.style.borderColor = "#98E37E"
-//     }
-// }
-
-
-//END DATE VALIDATION
-//
 
 
 
@@ -81,8 +75,22 @@ const description = document.getElementById("description");
 const checkDescription = () => {
     console.log(description.value);
     if(description.value < 1) {
-        description.style.borderColor = "#EF5050"
+        description.style.borderColor = "#EF5050";
+        return false;
     } else {
         description.style.borderColor = "#98E37E"
+        return false;
+    }
+}
+
+//NEXT BTN
+
+const nextButton = document.getElementById("next-button");
+
+nextButton.onclick = () => {
+    if(checkPosition() && checkEmployer() && checkDate() && checkDescription()){
+        location.href = "education.html";
+    } else {
+        alert('Form is not valid')
     }
 }

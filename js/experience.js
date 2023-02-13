@@ -1,4 +1,4 @@
-const backBtn = document.getElementById("back-btn");
+const backBtn = document.getElementById("back-button");
 backBtn.onclick = function () {
     location.href = "private.html";
 }

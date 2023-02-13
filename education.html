@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>განათლება</title>
+    <link rel="stylesheet" href="./assets/styles/education.css">
+</head>
+<body>
+    <section class="left-section">
+        <div class="education-info">
+            <h1 class="mb-12px">განათლება</h1>
+            <span class="mb-15px">3/3</span>
+        </div>
+        <div class="line mb-77px"></div>
+        <div class="container">
+            <div class="education-field mb-31px">
+                <form  class="position-form"  onchange="checkEducation()" id="position-form">
+                    <label class="mb-8px label-header" id="education-label"> სასწავლებელი </label>
+                    <input type="text" required placeholder="სასწავლებელი" id="education-input" class="input-100 mb-8px">
+                    <img src="./assets/images/error(!).svg" class="error-education-icon hide-icons" id="error-education-icon">
+                    <img src="./assets/images/success-icon.svg" class="success-education-icon hide-icons" id="success-education-icon">
+                    <small id="education-small" class="small-text"> მინიმუმ 2 სიმბოლო </small>
+                </form>
+            </div>
+            <div class="DIV2 mb-34px ">
+                <div class="grade">
+                    <label class="label-header mb-8px ">ხარისხი</label>
+                    <input type="text" placeholder="ხარისხი" class="mb-8px grade-end-date-input">
+                </div>
+                <div class="end-Date">
+                    <form  class="end-form " id="end-form">
+                        <label class="mb-8px label-header" id="end-label"> დამთავრების რიცხვი </label>
+                        <input type="date" required id="end-input" class=" mb-8px date-input grade-end-date-input" onchange="checkEndInput()">
+                        <!-- <img src="./assets/images/error(!).svg" class="error-end-icon left-910 hide" id="error-end-icon">
+                        <img src="./assets/images/success-icon.svg" class="success-end-icon left-910 hide" id="success-end-icon"> -->
+                    </form>
+                </div>
+            </div>
+            
+            <div class="description mt-34px">
+                <label class="label-header mb-8px">აღწერა</label>
+                <textarea name="description-me"  placeholder="განათლების აღწერა"id="description" cols="30" rows="10" class="for-textarea" onchange="checkDescription()"></textarea>
+            </div>
+            
+            <div class="line2 mt-53px"></div>
+            <div class="for-button mt-45px mb-114px">
+                <button class="add-education-btn" id="add-btn"> სხვა სასწავლებლის დამატება </button>
+            </div>
+
+            <!-- FOR ME -->
+
+            <div class="two-button mt-200px">
+                <button class="back-button" id="back-button">უკან</button>
+                <button class="next-button" id="next-button" >დასრულება</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="right-section">
+
+    </section>
+    <script src="./js/education.js"></script>
+</body>
+</html>
